@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BC5C7B"
+    android:id="@+id/dashboard"
+
+    tools:context=".Dashboard">
+
+    <Button
+        android:id="@+id/TextButton"
+        android:layout_width="128dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#FFCACA"
+        android:textColor="@color/black"
+        android:text="Read Text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Location"
+        android:layout_width="128dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="#FFCACA"
+        android:textColor="@color/black"
+        android:text="Location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/objectbutton"
+        android:layout_width="128dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="35dp"
+        android:backgroundTint="#FFCACA"
+        android:textColor="@color/black"
+        android:text="Detect Object"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Message"
+        android:layout_width="128dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="35dp"
+        android:backgroundTint="#FFCACA"
+        android:textColor="@color/black"
+        android:text="Message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/CallButton"-->
+<!--        android:layout_width="56dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginStart="50dp"-->
+<!--        android:layout_marginTop="608dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.039"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/contact" />-->
+
+
+    <ImageButton
+        android:id="@+id/AlertButton"
+        android:layout_width="108dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="540dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/alart"
+        tools:ignore="MissingConstraints"
+        tools:visibility="visible" />
+
+    <ImageButton
+
+        android:id="@+id/CallButton"
+        android:layout_width="72dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/contact" />
+
+
+    <ImageButton
+        android:id="@+id/Settings"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="596dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settinggear"
+        tools:ignore="MissingConstraints" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/address"-->
+<!--        android:layout_width="299dp"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:maxLines="10"-->
+<!--        android:text="TextView"-->
+<!--        android:textColor="00FFFFFF"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="39dp"-->
+<!--        tools:layout_editor_absoluteY="440dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="100dp"-->
+<!--        android:text="Button"-->
+<!--        tools:layout_editor_absoluteX="145dp"-->
+<!--        tools:layout_editor_absoluteY="490dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
