@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BlindAssistanceSystem</string>
+    <string name="title_activity_location">Location</string>
+    <string name="google_map_key">AIzaSyAeqCA2iJsm1DD4mWB1fRuU5fJ-RDg9mxY</string>
+    <string name="title_activity_near_by_places">NearByPlaces</string>
+    <string name="title_activity_maps">Maps</string>
+    <string name="google_maps_key">AIzaSyAeqCA2iJsm1DD4mWB1fRuU5fJ-RDg9mxY</string>
 </resources>

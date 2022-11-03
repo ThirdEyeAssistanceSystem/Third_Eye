@@ -1,11 +1,8 @@
 package com.example.blindassistancesystem;
 
 //import static com.example.blindassistancesystem.Dashboard.ISDISABLE;
-import static com.example.blindassistancesystem.Dashboard.REQUEST_CODE;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
-import androidx.core.app.ActivityCompat;
+import static com.example.blindassistancesystem.Dashboard.REQUEST_CODE;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,14 +10,15 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
-import android.widget.Switch;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 public class Settings extends AppCompatActivity {
-    RelativeLayout emergency;
+    RelativeLayout emergency,fontsize;
     //Switch aSwitch;
+    RelativeLayout font;
 
     SwitchCompat switchCompat;
 
@@ -30,6 +28,15 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        fontsize=(RelativeLayout) findViewById(R.id.FontSize);
+        fontsize.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Settings.this, Fontsize.class);
+                startActivity(intent);
+            }
+        });
 
         switchCompat=findViewById(R.id.SoundSwitch);
         SharedPreferences sharedPreferences=getSharedPreferences("save",MODE_PRIVATE);
@@ -80,7 +87,8 @@ public class Settings extends AppCompatActivity {
                     switchCompat.setChecked(false);
                 }
             }
-        });
+        }
+        );
 
 
     }
