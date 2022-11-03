@@ -1,18 +1,7 @@
 package com.example.blindassistancesystem;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -20,21 +9,21 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
-import android.os.PatternMatcher;
-import android.provider.MediaStore;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.telephony.SmsManager;
-import android.text.Html;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -42,14 +31,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 import java.io.IOException;
-import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 public class Dashboard extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
-    Button CameraButton;
+    Button CameraButton, Place;
     TextToSpeech textToSpeech;
     ImageButton Call, Emergency, Setting;
     Button button;
@@ -88,7 +76,16 @@ public class Dashboard extends AppCompatActivity implements GestureDetector.OnGe
 
         Call = (ImageButton) findViewById(R.id.CallButton);
         Setting = (ImageButton) findViewById(R.id.Settings);
+        Place=(Button) findViewById(R.id.places);
+        Place.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dashboard.this,Maps.class);
+                startActivity(intent);
+            }
+        });
         Emergency = (ImageButton) findViewById(R.id.AlertButton);
+
         //address = (TextView) findViewById(R.id.address);
 
 
@@ -107,7 +104,6 @@ public class Dashboard extends AppCompatActivity implements GestureDetector.OnGe
                 startActivity(intent);
             }
         });
-
         Setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

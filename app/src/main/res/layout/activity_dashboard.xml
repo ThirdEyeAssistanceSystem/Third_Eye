@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BC5C7B"
+    android:theme="@style/FontSizeMedium"
     android:id="@+id/dashboard"
 
     tools:context=".Dashboard">
@@ -18,6 +19,7 @@
         android:backgroundTint="#FFCACA"
         android:textColor="@color/black"
         android:text="Read Text"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -26,12 +28,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/Location"
+        android:id="@+id/places"
         android:layout_width="128dp"
         android:layout_height="100dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="300dp"
         android:backgroundTint="#FFCACA"
+        android:textSize="11sp"
         android:textColor="@color/black"
         android:text="Location"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,6 +48,7 @@
         android:id="@+id/objectbutton"
         android:layout_width="128dp"
         android:layout_height="100dp"
+        android:textSize="11sp"
         android:layout_marginTop="120dp"
         android:layout_marginRight="35dp"
         android:backgroundTint="#FFCACA"
@@ -52,6 +56,7 @@
         android:text="Detect Object"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -64,6 +69,7 @@
         android:layout_marginTop="300dp"
         android:layout_marginRight="35dp"
         android:backgroundTint="#FFCACA"
+        android:textSize="11sp"
         android:textColor="@color/black"
         android:text="Message"
         app:layout_constraintBottom_toBottomOf="parent"

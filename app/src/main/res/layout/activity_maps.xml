@@ -1,0 +1,99 @@
+<FrameLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Maps" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:backgroundTint="@color/white"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/TF_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.01"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <ImageButton
+                android:id="@+id/B_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="?android:attr/actionModeWebSearchDrawable"
+                android:onClick="onClick"
+                android:text="Search" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/B_hopistals"
+                android:layout_width="85dp"
+                android:scaleType="fitCenter"
+                android:layout_height="85dp"
+                android:onClick="onClick"
+                android:src="@drawable/stethoscope"
+                android:text="Hospitals" />
+
+            <ImageButton
+                android:id="@+id/atm"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:scaleType="fitCenter"
+                android:onClick="onClick"
+                android:src="@drawable/atm"
+                android:text="ATM Booths" />
+
+            <ImageButton
+                android:id="@+id/B_restaurants"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:scaleType="fitCenter"
+                android:onClick="onClick"
+                android:src="@drawable/fork"
+                android:text="Restautants" />
+            <ImageButton
+                android:id="@+id/gas"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:onClick="onClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/gas"
+                android:text="Petrol Pump" />
+            <ImageButton
+                android:id="@+id/mall"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:onClick="onClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mall"
+                android:text="Shopping Mall"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
