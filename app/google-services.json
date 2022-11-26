@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "317701846534",
-    "project_id": "thirdeye-49a2d",
-    "storage_bucket": "thirdeye-49a2d.appspot.com"
+    "project_number": "746682457339",
+    "project_id": "rdeye-6bcf8",
+    "storage_bucket": "rdeye-6bcf8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:317701846534:android:3c76f1ed62bf6cdbf0b587",
+        "mobilesdk_app_id": "1:746682457339:android:bbdad00fc9a8a03c4c245e",
         "android_client_info": {
           "package_name": "com.example.blindassistancesystem"
         }
       },
       "oauth_client": [
         {
-          "client_id": "317701846534-vdmntlaeotkmgk8gggdgj8ua94tqjp63.apps.googleusercontent.com",
+          "client_id": "746682457339-br3d2inqv7vu3eee6dkal3c72a53qkl3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA-99N48k96QCeSuZkWgsvRvdzYgKAZ3zQ"
+          "current_key": "AIzaSyC-ot0aC6vkozb2DqdfAe9rab-4oo5i-E8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "317701846534-vdmntlaeotkmgk8gggdgj8ua94tqjp63.apps.googleusercontent.com",
+              "client_id": "746682457339-br3d2inqv7vu3eee6dkal3c72a53qkl3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

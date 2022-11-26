@@ -50,17 +50,17 @@
             android:orientation="horizontal">
             <ImageButton
                 android:id="@+id/B_hopistals"
-                android:layout_width="85dp"
+                android:layout_width="80dp"
                 android:scaleType="fitCenter"
-                android:layout_height="85dp"
+                android:layout_height="80dp"
                 android:onClick="onClick"
                 android:src="@drawable/stethoscope"
                 android:text="Hospitals" />
 
             <ImageButton
                 android:id="@+id/atm"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:scaleType="fitCenter"
                 android:onClick="onClick"
                 android:src="@drawable/atm"
@@ -68,24 +68,24 @@
 
             <ImageButton
                 android:id="@+id/B_restaurants"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:scaleType="fitCenter"
                 android:onClick="onClick"
                 android:src="@drawable/fork"
                 android:text="Restautants" />
             <ImageButton
                 android:id="@+id/gas"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:onClick="onClick"
                 android:scaleType="fitCenter"
                 android:src="@drawable/gas"
                 android:text="Petrol Pump" />
             <ImageButton
                 android:id="@+id/mall"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:onClick="onClick"
                 android:scaleType="fitCenter"
                 android:src="@drawable/mall"
