@@ -46,7 +46,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback,
     private Location lastlocation;
     private Marker currentLocationmMarker;
     public static final int REQUEST_LOCATION_CODE = 99;
-    int PROXIMITY_RADIUS = 10000;
+    int PROXIMITY_RADIUS = 50000;
     double latitude,longitude;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,6 +151,7 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback,
         switch(v.getId())
         {
             case R.id.B_search:
+                mMap.clear();
                 EditText tf_location =  findViewById(R.id.TF_location);
                 String location = tf_location.getText().toString();
                 if(location.equals("")){
@@ -198,35 +199,30 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback,
                 String url = getUrl(latitude, longitude, hospital);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
-
                 getNearbyPlacesData.execute(dataTransfer);
                 Toast.makeText(this, "Showing Nearby Hospitals", Toast.LENGTH_SHORT).show();
                 break;
-
-
             case R.id.atm:
                 mMap.clear();
-                String atm = "ATM";
+                String atm = "atm";
                 url = getUrl(latitude, longitude, atm);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
-
                 getNearbyPlacesData.execute(dataTransfer);
                 Toast.makeText(this, "Showing Nearby ATM Booth", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.B_restaurants:
                 mMap.clear();
-                String resturant = "restuarant";
+                String resturant = "restaurant";
                 url = getUrl(latitude, longitude, resturant);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
-
                 getNearbyPlacesData.execute(dataTransfer);
                 Toast.makeText(this, "Showing Nearby Restaurants", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.gas:
                 mMap.clear();
-                String gas = "patrol";
+                String gas = "gas";
                 url = getUrl(latitude, longitude, gas);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
@@ -235,11 +231,10 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback,
                 break;
             case R.id.mall:
                 mMap.clear();
-                String mall = "shopping mall";
+                String mall = "store";
                 url = getUrl(latitude, longitude, mall);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
-
                 getNearbyPlacesData.execute(dataTransfer);
                 Toast.makeText(this, "Showing Nearby shopping mall", Toast.LENGTH_SHORT).show();
                 break;

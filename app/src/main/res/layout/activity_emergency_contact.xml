@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmergencyContact">
+    android:orientation="vertical"
+    tools:context=".EmergencyContact"
+    android:background="#DA4678"
+    android:padding="10dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#22E3ECEB"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:id="@+id/line1">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:hint="Name"
+        android:id="@+id/Name_Edit"
+        android:textColorHint="#56FFFFFF">
+    </EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        android:id="@+id/Number_Edit"
+        android:hint="01**********"
+        android:textColorHint="#56FFFFFF">
+    </EditText>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:backgroundTint="@color/white"
+        android:text="Add Contact"
+        android:id="@+id/addContact"
+        android:textColor="@color/purple_700"
+        app:cornerRadius="50px" >
+    </Button>
+
+</LinearLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/line1"
+    android:layout_marginTop="25dp"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+    </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

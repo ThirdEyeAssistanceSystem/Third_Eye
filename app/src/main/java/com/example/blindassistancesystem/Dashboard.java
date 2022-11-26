@@ -116,23 +116,28 @@ public class Dashboard extends AppCompatActivity implements GestureDetector.OnGe
     }
 
     private void sendtext() {
+//        ArrayList<Contact> arrayList=new ArrayList<>();
+//        DatabaseHelper helper=new DatabaseHelper(getApplicationContext());
+//        arrayList=helper.fetchAlldata();
+//        for(int i = 0;i< arrayList.size();i++) {
+//            Contact contact=arrayList.get(i);
+            String Mobile="01748703341";
+            Toast.makeText(Dashboard.this,Mobile,Toast.LENGTH_LONG).show();
+            String text = message;
 
-        String Mobile="+8801748703341";
-        String text=message;
-
-        Intent intent=new Intent(getApplicationContext(),Dashboard.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent,0);
-        SmsManager smsManager = SmsManager.getDefault();
-        if(ActivityCompat.checkSelfPermission(Dashboard.this, Manifest.permission.SEND_SMS)==PackageManager.PERMISSION_GRANTED) {
-            smsManager.sendTextMessage(Mobile,null,text,pendingIntent,null);
-            Toast.makeText(Dashboard.this, "Message sent", Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(Dashboard.this, "Nope", Toast.LENGTH_LONG).show();
-        }
+            Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+            SmsManager smsManager = SmsManager.getDefault();
+            if (ActivityCompat.checkSelfPermission(Dashboard.this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
+                smsManager.sendTextMessage(Mobile, null, text, pendingIntent, null);
+                Toast.makeText(Dashboard.this, "Message sent", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(Dashboard.this, "Nope", Toast.LENGTH_LONG).show();
+            }
+        //
 
        // finish();
-
+       //helper.close();
     }
 
     @SuppressLint("MissingPermission")
