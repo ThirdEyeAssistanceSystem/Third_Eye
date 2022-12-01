@@ -75,6 +75,13 @@ public class Dashboard extends AppCompatActivity implements GestureDetector.OnGe
 
 
         Call = (ImageButton) findViewById(R.id.CallButton);
+        Call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Dashboard.this, Call.class);
+                startActivity(intent);
+            }
+        });
         Setting = (ImageButton) findViewById(R.id.Settings);
         Place=(Button) findViewById(R.id.places);
         Place.setOnClickListener(new View.OnClickListener() {
